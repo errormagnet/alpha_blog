@@ -1,0 +1,25 @@
+<% if @article && @article.errors.any? %>
+  <h3 style="color: red">The following error(s) prevented the article form being created</h3>
+  <ul>
+    <% @article.errors.full_messages.each do |err| %>
+      <li style="color: red"><%= err %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div>
+  <%= form_with(model: @article, local: true) do | f |%>
+    <p>
+      <%= f.label :title %><br/>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :description %><br/>
+      <%= f.text_area :description %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+    </div>
+
+  <% end %>
