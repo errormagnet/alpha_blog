@@ -1,0 +1,29 @@
+<% if @user && @user.errors.any? %>
+  <h3 style="color: red">The following error(s) prevented the account form being created</h3>
+  <ul>
+    <% @user.errors.full_messages.each do |err| %>
+      <li style="color: red"><%= err %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<div>
+  <%= form_with(model: @user, local: true) do | f |%>
+    <p>
+      <%= f.label :username %><br/>
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :email %><br/>
+      <%= f.email_field :email %>
+    </p>
+    <p>
+      <%= f.label :password %><br/>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.submit(name = 'Signup') %>
+    </p>
+    </div>
+
+  <% end %>
