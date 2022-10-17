@@ -22,7 +22,7 @@
       <%= f.password_field :password %>
     </p>
     <p>
-      <%= f.submit(name = 'Signup') %>
+      <%= f.submit(name = (@user.new_record?? 'Signup' : 'Update account')) %>
     </p>
     </div>
 
