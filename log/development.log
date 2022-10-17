@@ -6270,3 +6270,348 @@ ActionView::Template::Error (wrong number of arguments (given 2, expected 1)):
     6: <button><%= link_to 'Create Article', new_article_path %></button>
   
 app/views/articles/index.html.erb:3
+Started GET "/articles" for ::1 at 2022-10-17 13:46:29 +0600
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 7.2ms | Allocations: 4799)
+  Rendered articles/index.html.erb within layouts/application (Duration: 50.1ms | Allocations: 9076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.8ms | Allocations: 250)
+  Rendered layouts/_messages.html.erb (Duration: 0.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 114.5ms | Allocations: 16294)
+Completed 200 OK in 152ms (Views: 128.9ms | ActiveRecord: 1.0ms | Allocations: 21566)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 13:46:33 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.0ms | Allocations: 1546)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3048)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 6968)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.3ms | Allocations: 7583)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 13:46:34 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.4ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 6622)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.3ms | Allocations: 7112)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 13:46:35 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.0ms | Allocations: 1487)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 53.2ms | Allocations: 6618)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.3ms | Allocations: 7108)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 13:46:36 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.2ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 6611)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.4ms | Allocations: 7091)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 13:46:37 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.2ms | Allocations: 1487)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 6607)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.3ms | Allocations: 7087)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 13:46:38 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.3ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 6611)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.3ms | Allocations: 7091)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 15:35:58 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.3ms | Allocations: 1517)
+  Rendered articles/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3675)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 7468)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.6ms | Allocations: 7957)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 15:35:59 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.2ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 6611)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.3ms | Allocations: 7091)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 15:36:03 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 1.9ms | Allocations: 1487)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 6607)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.3ms | Allocations: 7088)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 15:36:04 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 3.5ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 70.7ms | Allocations: 6611)
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.6ms | Allocations: 7091)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 15:36:05 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.2ms | Allocations: 1487)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 6607)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 1.1ms | Allocations: 7087)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 15:36:06 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.1ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 6611)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.3ms | Allocations: 7091)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 15:36:07 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.1ms | Allocations: 1487)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 58.1ms | Allocations: 6607)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.4ms | Allocations: 7087)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 15:36:08 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.4ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 6611)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.4ms | Allocations: 7091)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 15:36:09 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.0ms | Allocations: 1487)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 6607)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 1.0ms | Allocations: 7087)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 15:36:10 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.2ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 6620)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.4ms | Allocations: 7100)
+
+
+Started GET "/articles?page=2" for ::1 at 2022-10-17 15:36:11 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 2.5ms | Allocations: 1487)
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.2ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 6616)
+Completed 200 OK in 54ms (Views: 53.0ms | ActiveRecord: 0.5ms | Allocations: 7097)
+
+
+Started GET "/articles?page=1" for ::1 at 2022-10-17 15:36:12 +0600
+Processing by ArticlesController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/articles/_articles.html.erb:10
+  Rendered articles/_articles.html.erb (Duration: 1.9ms | Allocations: 1488)
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2830)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_nav_bar.html.erb (Duration: 0.1ms | Allocations: 118)
+  Rendered layouts/_messages.html.erb (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 6611)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.4ms | Allocations: 7091)
+
+
