@@ -1,0 +1,5 @@
+<h1>User Details</h1>
+<p><%= @user.username %> | <%= link_to 'Edit', edit_user_path(@user) %></p>
+<% if @user.articles.length != 0 %>
+  <%= render 'articles/articles', obj: @user.articles %>
+<% end %>
